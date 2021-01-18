@@ -10,5 +10,12 @@ import Foundation
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-
+    
+    static var identifier: String {
+        return "FeedTableViewCell"
+    }
+    
+    func configure(_ with: FeedItem) {
+        //TODO: Configure the cell
+    }
 }

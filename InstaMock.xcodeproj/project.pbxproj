@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082480A325B64EFC0092B501 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082480A225B64EFC0092B501 /* FeedItem.swift */; };
+		082480A525B652D10092B501 /* FeedPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 082480A425B652D10092B501 /* FeedPayload.json */; };
+		082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082480A825B657030092B501 /* MockNetworkingLayer.swift */; };
 		085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70C725B6326F001F2F46 /* AppDelegate.swift */; };
 		085F70CA25B6326F001F2F46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70C925B6326F001F2F46 /* SceneDelegate.swift */; };
 		085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70CB25B6326F001F2F46 /* FeedViewController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		082480A225B64EFC0092B501 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		082480A425B652D10092B501 /* FeedPayload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedPayload.json; sourceTree = "<group>"; };
+		082480A825B657030092B501 /* MockNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingLayer.swift; sourceTree = "<group>"; };
 		085F70C425B6326F001F2F46 /* InstaMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085F70C725B6326F001F2F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		085F70C925B6326F001F2F46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082480A125B64EE40092B501 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				082480A225B64EFC0092B501 /* FeedItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		082480A725B656C20092B501 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				082480A825B657030092B501 /* MockNetworkingLayer.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		085F70BB25B6326F001F2F46 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,7 @@
 				085F70FB25B6355D001F2F46 /* Assets */,
 				087DC9C525B640530061B7A0 /* UI */,
 				085F70FC25B63572001F2F46 /* Core Data */,
+				082480A725B656C20092B501 /* Networking */,
 			);
 			path = InstaMock;
 			sourceTree = "<group>";
@@ -148,6 +171,7 @@
 		085F70FB25B6355D001F2F46 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				082480A425B652D10092B501 /* FeedPayload.json */,
 				085F70D825B63270001F2F46 /* Info.plist */,
 				085F70D325B63270001F2F46 /* Assets.xcassets */,
 			);
@@ -157,6 +181,7 @@
 		085F70FC25B63572001F2F46 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				082480A125B64EE40092B501 /* Models */,
 				085F70D025B6326F001F2F46 /* InstaMock.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -305,6 +330,7 @@
 			files = (
 				087DC9C425B63E890061B7A0 /* FeedTableViewCell.xib in Resources */,
 				085F70D725B63270001F2F46 /* LaunchScreen.storyboard in Resources */,
+				082480A525B652D10092B501 /* FeedPayload.json in Resources */,
 				085F70D425B63270001F2F46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,10 +357,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				087DC9B725B639410061B7A0 /* FeedViewModel.swift in Sources */,
+				082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */,
 				087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */,
 				085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */,
 				087DC9BA25B6396A0061B7A0 /* CommentsViewController.swift in Sources */,
 				085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */,
+				082480A325B64EFC0092B501 /* FeedItem.swift in Sources */,
 				085F70CA25B6326F001F2F46 /* SceneDelegate.swift in Sources */,
 				087DC9BC25B639760061B7A0 /* CommentsViewModel.swift in Sources */,
 				085F70D225B6326F001F2F46 /* InstaMock.xcdatamodeld in Sources */,

@@ -1,0 +1,38 @@
+{
+    "feedRefreshTime": "2021-01-18T23:39:53.000Z"
+    "feed": [
+        {
+            "userImageId": 123,
+            "displayName": "Susana Meza",
+            "followStatus": false,
+            "postImageId": 456,
+            "likeStatus": true,
+            "likeCount": 1000,
+            "comment": "Love your photo!",
+            "subCommentCount": 70,
+            "date": "2021-01-17T23:01:53.000Z"
+        },
+        {
+            "userImageId": 124,
+            "displayName": "Gaby Meza",
+            "followStatus": true,
+            "postImageId": 456,
+            "likeStatus": true,
+            "likeCount": 2000,
+            "comment": "Love your photo!",
+            "subCommentCount": 60,
+            "date": "2021-01-17T23:01:53.000Z"
+        },
+        {
+            "userImageId": 125,
+            "displayName": "Lidia Meza",
+            "followStatus": false,
+            "postImageId": 456,
+            "likeStatus": false,
+            "likeCount": 3000,
+            "comment": "Love your photo!",
+            "subCommentCount": 50,
+            "date": "2021-01-17T23:01:53.000Z"
+        }
+    ]
+}

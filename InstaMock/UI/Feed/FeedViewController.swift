@@ -11,11 +11,13 @@ import Foundation
 
 class FeedViewController: UIViewController {
     
+    var feedTableView: UITableView
     var feedViewModel: FeedViewModel
     
     // MARK: LifeCycle
     
     init() {
+        feedTableView = UITableView(frame: CGRect.zero, style: .plain)
         feedViewModel = FeedViewModel()
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,5 +26,56 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+        registerCells()
     }
+    
+    // MARK: Setup
+    
+    private func setupUI() {
+        feedTableView.dataSource = self
+        feedTableView.delegate = self
+
+        feedTableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(feedTableView)
+        view.addConstraints([
+            feedTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            feedTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            feedTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            feedTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+         ])
+    }
+    
+    private func registerCells() {
+        feedTableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
+        
+    }
+
+}
+
+extension FeedViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        feedViewModel.numberOfRows
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell,
+            let feedItem = feedViewModel.feedItem(indexPath)
+        else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(feedItem)
+        
+        return cell
+    }
+    
+    
+}
+
+extension FeedViewController: UITableViewDelegate {
+    
 }
