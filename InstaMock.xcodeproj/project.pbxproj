@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70C725B6326F001F2F46 /* AppDelegate.swift */; };
 		085F70CA25B6326F001F2F46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70C925B6326F001F2F46 /* SceneDelegate.swift */; };
-		085F70CC25B6326F001F2F46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70CB25B6326F001F2F46 /* ViewController.swift */; };
-		085F70CF25B6326F001F2F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085F70CD25B6326F001F2F46 /* Main.storyboard */; };
+		085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70CB25B6326F001F2F46 /* FeedViewController.swift */; };
 		085F70D225B6326F001F2F46 /* InstaMock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 085F70D025B6326F001F2F46 /* InstaMock.xcdatamodeld */; };
 		085F70D425B63270001F2F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085F70D325B63270001F2F46 /* Assets.xcassets */; };
 		085F70D725B63270001F2F46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085F70D525B63270001F2F46 /* LaunchScreen.storyboard */; };
 		085F70E225B63271001F2F46 /* InstaMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70E125B63271001F2F46 /* InstaMockTests.swift */; };
 		085F70ED25B63271001F2F46 /* InstaMockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F70EC25B63271001F2F46 /* InstaMockUITests.swift */; };
+		087DC9B725B639410061B7A0 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9B625B639410061B7A0 /* FeedViewModel.swift */; };
+		087DC9BA25B6396A0061B7A0 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9B925B6396A0061B7A0 /* CommentsViewController.swift */; };
+		087DC9BC25B639760061B7A0 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9BB25B639760061B7A0 /* CommentsViewModel.swift */; };
+		087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */; };
+		087DC9C425B63E890061B7A0 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,7 @@
 		085F70C425B6326F001F2F46 /* InstaMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085F70C725B6326F001F2F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		085F70C925B6326F001F2F46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		085F70CB25B6326F001F2F46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		085F70CE25B6326F001F2F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		085F70CB25B6326F001F2F46 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		085F70D125B6326F001F2F46 /* InstaMock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstaMock.xcdatamodel; sourceTree = "<group>"; };
 		085F70D325B63270001F2F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		085F70D625B63270001F2F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		085F70E825B63271001F2F46 /* InstaMockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaMockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		085F70EC25B63271001F2F46 /* InstaMockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaMockUITests.swift; sourceTree = "<group>"; };
 		085F70EE25B63271001F2F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		087DC9B625B639410061B7A0 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		087DC9B925B6396A0061B7A0 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		087DC9BB25B639760061B7A0 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +109,10 @@
 		085F70C625B6326F001F2F46 /* InstaMock */ = {
 			isa = PBXGroup;
 			children = (
-				085F70C725B6326F001F2F46 /* AppDelegate.swift */,
-				085F70C925B6326F001F2F46 /* SceneDelegate.swift */,
-				085F70CB25B6326F001F2F46 /* ViewController.swift */,
-				085F70CD25B6326F001F2F46 /* Main.storyboard */,
-				085F70D325B63270001F2F46 /* Assets.xcassets */,
-				085F70D525B63270001F2F46 /* LaunchScreen.storyboard */,
-				085F70D825B63270001F2F46 /* Info.plist */,
-				085F70D025B6326F001F2F46 /* InstaMock.xcdatamodeld */,
+				085F70FA25B63298001F2F46 /* DefaultFiles */,
+				085F70FB25B6355D001F2F46 /* Assets */,
+				087DC9C525B640530061B7A0 /* UI */,
+				085F70FC25B63572001F2F46 /* Core Data */,
 			);
 			path = InstaMock;
 			sourceTree = "<group>";
@@ -129,6 +133,70 @@
 				085F70EE25B63271001F2F46 /* Info.plist */,
 			);
 			path = InstaMockUITests;
+			sourceTree = "<group>";
+		};
+		085F70FA25B63298001F2F46 /* DefaultFiles */ = {
+			isa = PBXGroup;
+			children = (
+				085F70C725B6326F001F2F46 /* AppDelegate.swift */,
+				085F70C925B6326F001F2F46 /* SceneDelegate.swift */,
+				085F70D525B63270001F2F46 /* LaunchScreen.storyboard */,
+			);
+			path = DefaultFiles;
+			sourceTree = "<group>";
+		};
+		085F70FB25B6355D001F2F46 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				085F70D825B63270001F2F46 /* Info.plist */,
+				085F70D325B63270001F2F46 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		085F70FC25B63572001F2F46 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				085F70D025B6326F001F2F46 /* InstaMock.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		087DC9B525B639290061B7A0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				085F70CB25B6326F001F2F46 /* FeedViewController.swift */,
+				087DC9B625B639410061B7A0 /* FeedViewModel.swift */,
+				087DC9BD25B63CFF0061B7A0 /* FeedTableViewCell */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		087DC9B825B639570061B7A0 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				087DC9B925B6396A0061B7A0 /* CommentsViewController.swift */,
+				087DC9BB25B639760061B7A0 /* CommentsViewModel.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		087DC9BD25B63CFF0061B7A0 /* FeedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */,
+				087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */,
+			);
+			path = FeedTableViewCell;
+			sourceTree = "<group>";
+		};
+		087DC9C525B640530061B7A0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				087DC9B525B639290061B7A0 /* Feed */,
+				087DC9B825B639570061B7A0 /* Comments */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +303,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087DC9C425B63E890061B7A0 /* FeedTableViewCell.xib in Resources */,
 				085F70D725B63270001F2F46 /* LaunchScreen.storyboard in Resources */,
 				085F70D425B63270001F2F46 /* Assets.xcassets in Resources */,
-				085F70CF25B6326F001F2F46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				085F70CC25B6326F001F2F46 /* ViewController.swift in Sources */,
+				087DC9B725B639410061B7A0 /* FeedViewModel.swift in Sources */,
+				087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */,
+				085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */,
+				087DC9BA25B6396A0061B7A0 /* CommentsViewController.swift in Sources */,
 				085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */,
 				085F70CA25B6326F001F2F46 /* SceneDelegate.swift in Sources */,
+				087DC9BC25B639760061B7A0 /* CommentsViewModel.swift in Sources */,
 				085F70D225B6326F001F2F46 /* InstaMock.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,14 +373,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		085F70CD25B6326F001F2F46 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				085F70CE25B6326F001F2F46 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		085F70D525B63270001F2F46 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MLANHN68YN;
-				INFOPLIST_FILE = InstaMock/Info.plist;
+				INFOPLIST_FILE = InstaMock/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MLANHN68YN;
-				INFOPLIST_FILE = InstaMock/Info.plist;
+				INFOPLIST_FILE = InstaMock/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
