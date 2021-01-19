@@ -29,6 +29,7 @@ class FeedViewController: UIViewController {
         
         setupUI()
         registerCells()
+        loadData()
     }
     
     // MARK: Setup
@@ -50,6 +51,10 @@ class FeedViewController: UIViewController {
     private func registerCells() {
         feedTableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
         
+    }
+    
+    private func loadData() {
+        feedViewModel.loadFeedResponse()
     }
 
 }

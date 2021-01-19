@@ -8,7 +8,13 @@
 
 import Foundation
 
-struct FeedItem {
+struct FeedResponse: Codable {
+    var feedItems: [FeedItem]
+    
+
+}
+
+struct FeedItem: Codable {
     var userImageId: Int32
     var displayName: String
     var followStatus: Bool
@@ -18,4 +24,5 @@ struct FeedItem {
     var comment: String
     var subCommentCount: Int32
     var date: Date
+
 }

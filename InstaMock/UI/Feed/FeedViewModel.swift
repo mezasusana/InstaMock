@@ -10,6 +10,8 @@ import Foundation
 
 class FeedViewModel {
     
+    var feedResponse: FeedResponse?
+    
     // MARK: Public API
     
     var numberOfRows: Int {
@@ -17,24 +19,26 @@ class FeedViewModel {
         5
     }
     
-    func feedItem(_ for: IndexPath) -> FeedItem? {
-        return generateMockFeedItem()
+    func feedItem(_ forIndexPath: IndexPath) -> FeedItem? {
+        guard
+            let feedResponse = feedResponse,
+            feedResponse.feedItems.count > forIndexPath.row
+        else {
+            return nil
+        }
+        return feedResponse.feedItems[forIndexPath.row]
     }
     
-    
-    // MARK: Delete This (TEMP)
-    
-    private func generateMockFeedItem() -> FeedItem {
-        return FeedItem(userImageId: 123,
-                        displayName: "Susana Meza",
-                        followStatus: false,
-                        postImageId: 456,
-                        likeStatus: false,
-                        likeCount: 1723898,
-                        comment: "Hi!",
-                        subCommentCount: 70,
-                        date: Date())
-        
+    func loadFeedResponse() {
+        MockNetworkingLayer.shared.getFeed { [weak self] (result) in
+            switch result {
+            case .success(let feedResponse):
+                self?.feedResponse = feedResponse
+            case .failure(let _):
+                print("Oops, getting feed failed")
+            }
+        }
     }
+
     
 }
