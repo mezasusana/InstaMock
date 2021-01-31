@@ -21,8 +21,13 @@ struct FeedItem: Codable {
     var postImageId: Int32
     var likeStatus: Bool
     var likeCount: Int32
-    var comment: String
+    var commentItems: [CommentItem]
     var subCommentCount: Int32
     var date: Date
 
+}
+
+struct CommentItem: Codable {
+let username: String
+let comment: String
 }

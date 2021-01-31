@@ -15,8 +15,7 @@ class FeedViewModel {
     // MARK: Public API
     
     var numberOfRows: Int {
-        // TODO:
-        5
+        feedResponse?.feedItems.count ?? 5
     }
     
     func feedItem(_ forIndexPath: IndexPath) -> FeedItem? {

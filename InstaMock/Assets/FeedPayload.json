@@ -2,36 +2,53 @@
     "feedItems": [
         {
             "userImageId": 123,
-            "displayName": "Susana Meza",
+            "displayName": "susanaMeza",
             "followStatus": false,
-            "postImageId": 456,
+            "postImageId": 455,
             "likeStatus": true,
             "likeCount": 1000,
-            "comment": "Love your photo!",
+            "commentItems": [
+                { "username" : "gaby" , "comment" : "love" },
+                { "username" : "lidia" , "comment" : "your" },
+                { "username" : "susana" , "comment" : "picture" }
+            ],
+            "commentLikeCount" : 3,
             "subCommentCount": 71,
-            "date": "2021-01-17T23:01:53.000Z"
+            "date": "2020-01-17T23:01:53.000Z"
+    
         },
         {
             "userImageId": 124,
-            "displayName": "Gaby Meza",
+            "displayName": "gabyMeza",
             "followStatus": true,
             "postImageId": 456,
             "likeStatus": true,
             "likeCount": 2000,
-            "comment": "That looks like so much fun!",
+            "commentItems": [
+                { "username" : "gaby" , "comment" : "looks" },
+                { "username" : "lidia" , "comment" : "so" },
+                { "username" : "susana" , "comment" : "good" }
+            ],
+            "commentLikeCount" : 4,
             "subCommentCount": 60,
             "date": "2021-01-17T23:01:53.000Z"
         },
         {
             "userImageId": 125,
-            "displayName": "Lidia Meza",
+            "displayName": "lidiaMeza",
             "followStatus": false,
-            "postImageId": 456,
+            "postImageId": 457,
             "likeStatus": false,
             "likeCount": 3000,
-            "comment": "What restaurant is that?",
+            "commentItems": [
+                { "username" : "gaby" , "comment" : "so" },
+                { "username" : "lidia" , "comment" : "much" },
+                { "username" : "susana" , "comment" : "fun" }
+            ],
+            "commentLikeCount" : 5,
             "subCommentCount": 50,
-            "date": "2021-01-17T23:01:53.000Z"
+            "date": "2020-09-17T23:01:53.000Z"
         }
     ]
 }
+

@@ -11,14 +11,14 @@ import Foundation
 
 class FeedViewController: UIViewController {
     
-    var feedTableView: UITableView
-    var feedViewModel: FeedViewModel
+    var tableView: UITableView
+    var viewModel: FeedViewModel
     
     // MARK: LifeCycle
     
     init() {
-        feedTableView = UITableView(frame: CGRect.zero, style: .plain)
-        feedViewModel = FeedViewModel()
+        tableView = UITableView(frame: CGRect.zero, style: .plain)
+        viewModel = FeedViewModel()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,46 +35,46 @@ class FeedViewController: UIViewController {
     // MARK: Setup
     
     private func setupUI() {
-        feedTableView.dataSource = self
-        feedTableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
 
-        feedTableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(feedTableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
         view.addConstraints([
-            feedTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            feedTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            feedTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            feedTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
          ])
     }
     
     private func registerCells() {
-        feedTableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
+        let cell = UINib(nibName: "FeedTableViewCell", bundle: nil)
+        self.tableView.register(cell, forCellReuseIdentifier: "FeedTableViewCell")
         
     }
     
     private func loadData() {
-        feedViewModel.loadFeedResponse()
+        viewModel.loadFeedResponse()
     }
 
 }
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        feedViewModel.numberOfRows
+        viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell,
-            let feedItem = feedViewModel.feedItem(indexPath)
+            let feedItem = viewModel.feedItem(indexPath)
         else {
             return UITableViewCell()
         }
-        
-        cell.configure(feedItem)
-        
+
+        cell.configure(with: feedItem, delegate: self)
         return cell
     }
     
@@ -84,3 +84,19 @@ extension FeedViewController: UITableViewDataSource {
 extension FeedViewController: UITableViewDelegate {
     
 }
+
+extension FeedViewController: FeedTableViewCellDelegate {
+    func viewCommentsButtonTapped(cell: FeedTableViewCell) {
+        guard
+            let indexPath = tableView.indexPath(for: cell),
+            let feedItem = viewModel.feedItem(indexPath)
+        else {
+            return
+        }
+        
+        let commentItems = feedItem.commentItems
+        let commentViewController = CommentsViewController()
+        self.navigationController?.pushViewController(commentViewController, animated: true)
+    }
+}
+

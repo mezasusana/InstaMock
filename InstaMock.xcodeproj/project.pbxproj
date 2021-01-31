@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081EBA5725C74AE0005C9CE0 /* Date+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081EBA5625C74AE0005C9CE0 /* Date+Utility.swift */; };
+		081EBA5925C74B09005C9CE0 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */; };
 		082480A325B64EFC0092B501 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082480A225B64EFC0092B501 /* FeedItem.swift */; };
 		082480A525B652D10092B501 /* FeedPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 082480A425B652D10092B501 /* FeedPayload.json */; };
 		082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082480A825B657030092B501 /* MockNetworkingLayer.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		081EBA5625C74AE0005C9CE0 /* Date+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utility.swift"; sourceTree = "<group>"; };
+		081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
 		082480A225B64EFC0092B501 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		082480A425B652D10092B501 /* FeedPayload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedPayload.json; sourceTree = "<group>"; };
 		082480A825B657030092B501 /* MockNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingLayer.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		081EBA5525C74AC3005C9CE0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				081EBA5625C74AE0005C9CE0 /* Date+Utility.swift */,
+				081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		082480A125B64EE40092B501 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		085F70C625B6326F001F2F46 /* InstaMock */ = {
 			isa = PBXGroup;
 			children = (
+				081EBA5525C74AC3005C9CE0 /* Utility */,
 				085F70FA25B63298001F2F46 /* DefaultFiles */,
 				085F70FB25B6355D001F2F46 /* Assets */,
 				087DC9C525B640530061B7A0 /* UI */,
@@ -359,8 +373,10 @@
 				087DC9B725B639410061B7A0 /* FeedViewModel.swift in Sources */,
 				082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */,
 				087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */,
+				081EBA5925C74B09005C9CE0 /* UIImageView+Utility.swift in Sources */,
 				085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */,
 				087DC9BA25B6396A0061B7A0 /* CommentsViewController.swift in Sources */,
+				081EBA5725C74AE0005C9CE0 /* Date+Utility.swift in Sources */,
 				085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */,
 				082480A325B64EFC0092B501 /* FeedItem.swift in Sources */,
 				085F70CA25B6326F001F2F46 /* SceneDelegate.swift in Sources */,
