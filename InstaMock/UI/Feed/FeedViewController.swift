@@ -96,6 +96,7 @@ extension FeedViewController: FeedTableViewCellDelegate {
         
         let commentItems = feedItem.commentItems
         let commentViewController = CommentsViewController()
+        commentViewController.setup(with: commentItems)
         self.navigationController?.pushViewController(commentViewController, animated: true)
     }
 }

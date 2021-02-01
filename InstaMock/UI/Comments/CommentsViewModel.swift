@@ -9,6 +9,15 @@
 import Foundation
 
 class CommentsViewModel {
-
-
+    
+    var commentItems: [CommentItem] = []
+       
+       func commentItem(at index: Int) -> CommentItem? {
+           guard commentItems.count > index else {
+               return nil
+           }
+           
+           return commentItems[index]
+       }
+    
 }

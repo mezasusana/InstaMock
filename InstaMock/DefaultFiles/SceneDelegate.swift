@@ -21,8 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = FeedViewController()
         window?.makeKeyAndVisible()
+        
+        let viewController = FeedViewController()
+        let navViewController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = navViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
