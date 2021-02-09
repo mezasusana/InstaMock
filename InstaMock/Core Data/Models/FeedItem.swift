@@ -8,17 +8,19 @@
 
 import Foundation
 
-struct FeedResponse: Codable {
+// Note: For the purpose of this demo, these objects are classes
+
+class FeedResponse: Codable {
     var feedItems: [FeedItem]
     
 
 }
 
-struct FeedItem: Codable {
+class FeedItem: Codable {
     var userImageId: Int32
     var displayName: String
     var followStatus: Bool
-    var postImageId: Int32
+    var postId: Int32
     var likeStatus: Bool
     var likeCount: Int32
     var commentItems: [CommentItem]
@@ -27,7 +29,7 @@ struct FeedItem: Codable {
 
 }
 
-struct CommentItem: Codable {
+class CommentItem: Codable {
 let username: String
 let comment: String
 }

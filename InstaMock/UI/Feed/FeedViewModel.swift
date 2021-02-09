@@ -10,34 +10,35 @@ import Foundation
 
 class FeedViewModel {
     
-    var feedResponse: FeedResponse?
+    var likeDebouncer = Debouncer(seconds: 3.0)
+    
     
     // MARK: Public API
     
     var numberOfRows: Int {
-        feedResponse?.feedItems.count ?? 5
+        DataService.singleton.feedResponse?.feedItems.count ?? 5
     }
     
     func feedItem(_ forIndexPath: IndexPath) -> FeedItem? {
         guard
-            let feedResponse = feedResponse,
+            let feedResponse = DataService.singleton.feedResponse,
             feedResponse.feedItems.count > forIndexPath.row
         else {
             return nil
         }
+        
         return feedResponse.feedItems[forIndexPath.row]
     }
     
-    func loadFeedResponse() {
-        MockNetworkingLayer.shared.getFeed { [weak self] (result) in
-            switch result {
-            case .success(let feedResponse):
-                self?.feedResponse = feedResponse
-            case .failure(let _):
-                print("Oops, getting feed failed")
-            }
+    func loadFeedResponse(_ completion: @escaping (Result<FeedResponse, Error>) -> Void) { 
+        DataService.singleton.loadFeedResponse(completion)
+    }
+    
+    func changeLikeStatus(to status: Bool, for postId: Int32, _ completion: @escaping (Result<Bool, Error>) -> Void) {
+        likeDebouncer.debounce {
+            DataService.singleton.changeLikeStatus(to: status, for: postId, completion)
         }
     }
-
+    
     
 }

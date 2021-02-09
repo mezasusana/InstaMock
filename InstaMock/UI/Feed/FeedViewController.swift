@@ -13,12 +13,14 @@ class FeedViewController: UIViewController {
     
     var tableView: UITableView
     var viewModel: FeedViewModel
+    var dataService: DataService
     
     // MARK: LifeCycle
     
     init() {
         tableView = UITableView(frame: CGRect.zero, style: .plain)
         viewModel = FeedViewModel()
+        dataService = DataService()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,7 +57,20 @@ class FeedViewController: UIViewController {
     }
     
     private func loadData() {
-        viewModel.loadFeedResponse()
+        viewModel.loadFeedResponse { [weak self] (result: Result<FeedResponse, Error>) in
+            guard let self = self else { return }
+
+            switch result {
+            case .success:
+                self.tableView.reloadData()
+            case .failure:
+                print("Oops. no internet connection")// TODO: show an error here.. (no internet)
+            }
+        }
+    }
+    
+    private func presentErrorAlert() {
+        // TODO: Present an error when we don't "have" intenet connection
     }
 
 }
@@ -73,7 +88,6 @@ extension FeedViewController: UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-
         cell.configure(with: feedItem, delegate: self)
         return cell
     }
@@ -86,6 +100,7 @@ extension FeedViewController: UITableViewDelegate {
 }
 
 extension FeedViewController: FeedTableViewCellDelegate {
+
     func viewCommentsButtonTapped(cell: FeedTableViewCell) {
         guard
             let indexPath = tableView.indexPath(for: cell),
@@ -99,5 +114,40 @@ extension FeedViewController: FeedTableViewCellDelegate {
         commentViewController.setup(with: commentItems)
         self.navigationController?.pushViewController(commentViewController, animated: true)
     }
+    
+    func likeButtonTapped(cell: FeedTableViewCell, changeLikeStatusTo likeStatus: Bool) {
+        guard
+            let indexPath = tableView.indexPath(for: cell),
+            let feedItem = viewModel.feedItem(indexPath)
+        else {
+            return
+        }
+        let postID = feedItem.postId
+        
+        viewModel.changeLikeStatus(to: likeStatus, for: postID) { [weak self] status in
+            
+            guard
+                let self = self,
+                self.tableView.indexPathsForVisibleRows?.contains(indexPath) ?? false,
+                let cell = self.tableView.cellForRow(at: indexPath) as? FeedTableViewCell
+            else {
+                return
+            }
+            
+            switch status {
+            case .success(let newLikeStatus):
+                if newLikeStatus {
+                    cell.like()
+                } else {
+                    cell.unlike()
+                }
+            case .failure: // TODO: No internet connection error
+                self.presentErrorAlert()
+            }
+        }
+    }
+
+
 }
+
 

@@ -10,6 +10,11 @@ import Foundation
 
 class MockNetworkingLayer {
     
+    struct DemoConstants {
+        static let mockInternetDelay: Double = 0.3 // seconds
+        // TODO: no internet connection
+    }
+    
     static let shared = MockNetworkingLayer()
     
     enum NetworkError {
@@ -19,25 +24,34 @@ class MockNetworkingLayer {
     
     func getFeed(_ completion: @escaping (Result<FeedResponse, Error>) -> Void ) {
         
-        //let internetAvailable = true
-        
-        if let url = Bundle.main.url(forResource: "FeedPayload", withExtension: "json") {
-            do {
-                let jsonData = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
-                let value = try! decoder.decode(FeedResponse.self, from: jsonData)
-                completion(.success(value))
-            } catch let error {
-                // handle error here
-                print("Catching error \(error)")
-                completion(.failure(error))
+        // Delay the network call on purpose to mock network connection
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + DemoConstants.mockInternetDelay) {
+            if let url = Bundle.main.url(forResource: "FeedPayload", withExtension: "json") {
+                do {
+                    let jsonData = try Data(contentsOf: url)
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+                    let value = try! decoder.decode(FeedResponse.self, from: jsonData)
+                    
+                    DispatchQueue.main.async {
+                        completion(.success(value))
+                    }
+                } catch let error {
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
+                }
             }
         }
-        
-        
-        
-    } // func
+    }
+    
+    func changeLikeStatus(to status: Bool, for postId: Int32, _ completion: @escaping (Result<Bool, Error>) -> Void) {
+        // Mock send a POST API to change the like status
+        DispatchQueue.main.asyncAfter(deadline: .now() + DemoConstants.mockInternetDelay) {
+            completion(.success(status))
+        }
+    }
+    
     
 }
 extension DateFormatter {

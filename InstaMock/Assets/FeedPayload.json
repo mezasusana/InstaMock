@@ -4,7 +4,7 @@
             "userImageId": 123,
             "displayName": "susanaMeza",
             "followStatus": false,
-            "postImageId": 455,
+            "postId": 455,
             "likeStatus": true,
             "likeCount": 1000,
             "commentItems": [
@@ -21,7 +21,7 @@
             "userImageId": 124,
             "displayName": "gabyMeza",
             "followStatus": true,
-            "postImageId": 456,
+            "postId": 456,
             "likeStatus": true,
             "likeCount": 2000,
             "commentItems": [
@@ -37,7 +37,7 @@
             "userImageId": 125,
             "displayName": "lidiaMeza",
             "followStatus": false,
-            "postImageId": 457,
+            "postId": 457,
             "likeStatus": false,
             "likeCount": 3000,
             "commentItems": [

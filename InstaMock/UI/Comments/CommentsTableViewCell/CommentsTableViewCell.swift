@@ -61,6 +61,5 @@ class CommentsTableViewCell: UITableViewCell {
         profilePicture.setRounded()
         commentsTableViewCellDelegate = delegate
     }
-    //func configure(with feedItem: FeedItem, delegate: FeedTableViewCellDelegate?)
     
 }

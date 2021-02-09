@@ -11,6 +11,7 @@ import UIKit
 
 protocol FeedTableViewCellDelegate: AnyObject {
     func viewCommentsButtonTapped(cell: FeedTableViewCell)
+    func likeButtonTapped(cell: FeedTableViewCell, changeLikeStatusTo: Bool)
 }
 
 class FeedTableViewCell: UITableViewCell {
@@ -30,43 +31,21 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var datePosted: UILabel!
     
     weak var feedTableViewCellDelegate: FeedTableViewCellDelegate?
+    weak var viewModel: FeedViewModel?
     
-    //TODO: fix do not store here
-    var isFollowing = false
-    var isLiked = false
-    var numLikes = 0
-    
+    var likeStatus: Bool = false
+
     @IBAction func followButton(_ sender: UIButton) {
-        isFollowing = !isFollowing
-        if isFollowing {
-            sender.setTitle("Following", for: .normal)
-            sender.setTitleColor(.black, for: .normal)
-        } else {
-            sender.setTitle("Follow", for: .normal)
-            sender.setTitleColor(.link, for: .normal)
-        }
+        
     }
     
     @IBAction func likeButton(_ sender: UIButton) {
-        isLiked = !isLiked
-        if isLiked {
-            sender.setImage(UIImage.init(systemName: "heart.fill"), for: .normal)
-            numLikes = numLikes + 1
-            if numLikes == 1 {
-                likeCount.text = "\(self.numLikes) like"
-            } else {
-                likeCount.text = "\(self.numLikes) likes"
-            }
-
+        if likeStatus {
+            self.unlike()
         } else {
-            sender.setImage(UIImage.init(systemName: "heart"), for: .normal)
-            numLikes = numLikes - 1
-            if numLikes == 1 {
-                likeCount.text = "\(self.numLikes) like"
-            } else {
-                likeCount.text = "\(self.numLikes) likes"
-            }
+            self.like()
         }
+        feedTableViewCellDelegate?.likeButtonTapped(cell: self, changeLikeStatusTo: likeStatus)
     }
     
     @IBAction func viewCommentsButton(_ sender: UIButton) {
@@ -77,12 +56,41 @@ class FeedTableViewCell: UITableViewCell {
     func configure(with feedItem: FeedItem, delegate: FeedTableViewCellDelegate?) {
         profileUsername.text = feedItem.displayName
         commentsSection.isHidden = true
-        likeCount.text = "\(String(feedItem.likeCount)) likes"
         profileImage.image = UIImage(named: String(feedItem.userImageId))
         profileImage.setRounded()
-        postImage.image = UIImage(named: String(feedItem.postImageId))
+        postImage.image = UIImage(named: String(feedItem.postId))
         viewCommentsButton.setTitle("View \(String(feedItem.subCommentCount)) comments", for: .normal)
         datePosted.text = String(feedItem.date.getElapsedInterval())
+        likeCount.text = "\(String(feedItem.likeCount)) likes"
+        
+        if feedItem.likeStatus {
+            like()
+            likeStatus = true
+        } else {
+            unlike()
+            likeStatus = false
+        }
+        
+        if feedItem.followStatus {
+            followButton.setTitle("Following", for: .normal)
+            followButton.setTitleColor(.darkGray, for: .normal)
+        } else {
+            followButton.setTitle("Follow", for: .normal)
+            followButton.setTitleColor(.link, for: .normal)
+            
+        }
+        
         feedTableViewCellDelegate = delegate
     }
+    
+    func unlike() {
+        likeStatus = false
+        likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+    }
+
+    func like() {
+        likeStatus = true
+        likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+    }
+    
 }

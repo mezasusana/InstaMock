@@ -11,6 +11,7 @@
 		081EBA5925C74B09005C9CE0 /* UIImageView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */; };
 		081EBA5C25C7552B005C9CE0 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081EBA5B25C7552B005C9CE0 /* CommentsTableViewCell.swift */; };
 		081EBA5E25C7553A005C9CE0 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081EBA5D25C7553A005C9CE0 /* CommentsTableViewCell.xib */; };
+		0822BDA025C9038B0007BD24 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822BD9F25C9038B0007BD24 /* DataService.swift */; };
 		082480A325B64EFC0092B501 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082480A225B64EFC0092B501 /* FeedItem.swift */; };
 		082480A525B652D10092B501 /* FeedPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 082480A425B652D10092B501 /* FeedPayload.json */; };
 		082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082480A825B657030092B501 /* MockNetworkingLayer.swift */; };
@@ -27,6 +28,7 @@
 		087DC9BC25B639760061B7A0 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9BB25B639760061B7A0 /* CommentsViewModel.swift */; };
 		087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */; };
 		087DC9C425B63E890061B7A0 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */; };
+		088CD39325D0B42000EC8014 /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CD39225D0B42000EC8014 /* Debounce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utility.swift"; sourceTree = "<group>"; };
 		081EBA5B25C7552B005C9CE0 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		081EBA5D25C7553A005C9CE0 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
+		0822BD9F25C9038B0007BD24 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		082480A225B64EFC0092B501 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		082480A425B652D10092B501 /* FeedPayload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedPayload.json; sourceTree = "<group>"; };
 		082480A825B657030092B501 /* MockNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingLayer.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		087DC9BB25B639760061B7A0 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		088CD39225D0B42000EC8014 /* Debounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				081EBA5625C74AE0005C9CE0 /* Date+Utility.swift */,
 				081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */,
+				088CD39225D0B42000EC8014 /* Debounce.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				082480A225B64EFC0092B501 /* FeedItem.swift */,
+				0822BD9F25C9038B0007BD24 /* DataService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -389,11 +395,13 @@
 				082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */,
 				087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */,
 				081EBA5925C74B09005C9CE0 /* UIImageView+Utility.swift in Sources */,
+				088CD39325D0B42000EC8014 /* Debounce.swift in Sources */,
 				085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */,
 				087DC9BA25B6396A0061B7A0 /* CommentsViewController.swift in Sources */,
 				081EBA5725C74AE0005C9CE0 /* Date+Utility.swift in Sources */,
 				085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */,
 				082480A325B64EFC0092B501 /* FeedItem.swift in Sources */,
+				0822BDA025C9038B0007BD24 /* DataService.swift in Sources */,
 				085F70CA25B6326F001F2F46 /* SceneDelegate.swift in Sources */,
 				087DC9BC25B639760061B7A0 /* CommentsViewModel.swift in Sources */,
 				085F70D225B6326F001F2F46 /* InstaMock.xcdatamodeld in Sources */,
