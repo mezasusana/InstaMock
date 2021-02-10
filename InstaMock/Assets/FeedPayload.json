@@ -8,9 +8,9 @@
             "likeStatus": true,
             "likeCount": 1000,
             "commentItems": [
-                { "username" : "gaby" , "comment" : "love" },
-                { "username" : "lidia" , "comment" : "your" },
-                { "username" : "susana" , "comment" : "picture" }
+                { "username" : "gabyMeza" , "userImageId": 124, "comment" : "love your picture!", "date": "2020-01-17T23:02:53.000Z" },
+                { "username" : "lidiaMeza" , "userImageId": 125, "comment" : "so pretty", "date": "2020-01-18T23:01:53.000Z" },
+                { "username" : "susanaMeza" , "userImageId": 123, "comment" : "nice picture", "date": "2020-01-19T23:01:53.000Z" }
             ],
             "commentLikeCount" : 3,
             "subCommentCount": 71,
@@ -25,9 +25,9 @@
             "likeStatus": true,
             "likeCount": 2000,
             "commentItems": [
-                { "username" : "gaby" , "comment" : "looks" },
-                { "username" : "lidia" , "comment" : "so" },
-                { "username" : "susana" , "comment" : "good" }
+                { "username" : "gabyMeza" , "userImageId": 124, "comment" : "wow", "date": "2021-01-18T23:01:53.000Z" },
+                { "username" : "lidiaMeza" , "userImageId": 125, "comment" : "cute!", "date": "2021-01-18T23:03:53.000Z" },
+                { "username" : "susanaMeza" , "userImageId": 123, "comment" : "love" , "date": "2021-01-19T23:03:53.000Z"}
             ],
             "commentLikeCount" : 4,
             "subCommentCount": 60,
@@ -41,9 +41,9 @@
             "likeStatus": false,
             "likeCount": 3000,
             "commentItems": [
-                { "username" : "gaby" , "comment" : "so" },
-                { "username" : "lidia" , "comment" : "much" },
-                { "username" : "susana" , "comment" : "fun" }
+                { "username" : "gabyMeza" , "userImageId": 124, "comment" : "love it" , "date": "2020-09-17T23:05:53.000Z" },
+                { "username" : "lidiaMeza" , "userImageId": 125, "comment" : "so nice!", "date": "2020-09-17T23:09:53.000Z" },
+                { "username" : "susanaMeza" , "userImageId": 123, "comment" : "love this picture" , "date": "2020-09-17T23:010:30.000Z" }
             ],
             "commentLikeCount" : 5,
             "subCommentCount": 50,

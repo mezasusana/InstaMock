@@ -30,6 +30,9 @@ class FeedItem: Codable {
 }
 
 class CommentItem: Codable {
-let username: String
-let comment: String
+    let username: String
+    let userImageId : Int32
+    let comment: String
+    let date: Date
+    
 }

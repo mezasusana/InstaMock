@@ -59,6 +59,8 @@ class CommentsTableViewCell: UITableViewCell {
         commentLabel.text = (commentItem.comment)
         profilePicture.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         profilePicture.setRounded()
+        profilePicture.image = UIImage(named: String(commentItem.userImageId))
+        commentDate.text = String(commentItem.date.getElapsedInterval())
         commentsTableViewCellDelegate = delegate
     }
     
