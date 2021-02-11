@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="InstaMock" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="uxI-tY-dsA" id="Q8s-Wo-pkE"/>
+                <outlet property="errorLabel" destination="f41-U6-CBB" id="Jsh-Bi-YkP"/>
+                <outlet property="loginButton" destination="NBk-Bc-bTr" id="MEB-8c-Ij0"/>
+                <outlet property="passwordTextField" destination="xyI-rI-0vy" id="siQ-08-rtZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="e7m-Qg-FnY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-nb-tmk">
+                    <rect key="frame" x="40" y="84" width="334" height="198.5"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uxI-tY-dsA">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-rI-0vy">
+                            <rect key="frame" x="0.0" y="54" width="334" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBk-Bc-bTr">
+                            <rect key="frame" x="0.0" y="108" width="334" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="8Ck-Rl-QHv"/>
+                            </constraints>
+                            <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="Jmh-48-3gf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f41-U6-CBB">
+                            <rect key="frame" x="0.0" y="178" width="334" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vx8-nb-tmk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="5gm-dD-MqY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vx8-nb-tmk" secondAttribute="trailing" constant="40" id="PEX-Ek-OiH"/>
+                <constraint firstItem="vx8-nb-tmk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="mku-OR-H5Q"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="-234"/>
+        </view>
+    </objects>
+</document>

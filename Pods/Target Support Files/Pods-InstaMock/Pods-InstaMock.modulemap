@@ -1,0 +1,6 @@
+framework module Pods_InstaMock {
+  umbrella header "Pods-InstaMock-umbrella.h"
+
+  export *
+  module * { export * }
+}

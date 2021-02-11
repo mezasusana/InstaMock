@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,17 @@
 		087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */; };
 		087DC9C425B63E890061B7A0 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */; };
 		088CD39325D0B42000EC8014 /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CD39225D0B42000EC8014 /* Debounce.swift */; };
+		08A122D825D4875D00F44582 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A122D725D4875D00F44582 /* SignUpView.xib */; };
+		08A122DD25D4899200F44582 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A122DC25D4899200F44582 /* InitialViewController.swift */; };
+		08A122E825D49C8500F44582 /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A122E725D49C8500F44582 /* InitialView.xib */; };
+		08A122EA25D49D8200F44582 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A122E925D49D8200F44582 /* LoginView.xib */; };
+		08A122EC25D49F9100F44582 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A122EB25D49F9100F44582 /* SignUpViewController.swift */; };
+		08A122EE25D4A8C900F44582 /* Style + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A122ED25D4A8C900F44582 /* Style + Utility.swift */; };
+		08A122F025D4B14200F44582 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08A122EF25D4B14200F44582 /* GoogleService-Info.plist */; };
+		08A2140725D486B700F0E2C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2140625D486B700F0E2C0 /* LoginViewController.swift */; };
+		34589BED57D8E3F8028D8A31 /* Pods_InstaMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADFF0D7769F6A61EF2E0C536 /* Pods_InstaMock.framework */; };
+		8522D961306D544F8E6D6236 /* Pods_InstaMock_InstaMockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701ED599D00B2FF80431748D /* Pods_InstaMock_InstaMockUITests.framework */; };
+		F7FB934092E494ED0AEB5753 /* Pods_InstaMockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E83DB3E3FCCC93954AB036F /* Pods_InstaMockTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +88,23 @@
 		087DC9BE25B63D180061B7A0 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		087DC9C325B63E890061B7A0 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		088CD39225D0B42000EC8014 /* Debounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
+		08A122D725D4875D00F44582 /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		08A122DC25D4899200F44582 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		08A122E725D49C8500F44582 /* InitialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
+		08A122E925D49D8200F44582 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		08A122EB25D49F9100F44582 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		08A122ED25D4A8C900F44582 /* Style + Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style + Utility.swift"; sourceTree = "<group>"; };
+		08A122EF25D4B14200F44582 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		08A2140625D486B700F0E2C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		12E3D844FB6F9980C857C033 /* Pods-InstaMockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMockTests.release.xcconfig"; path = "Target Support Files/Pods-InstaMockTests/Pods-InstaMockTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E83DB3E3FCCC93954AB036F /* Pods_InstaMockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaMockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BCAF89C0A231962CDF113F5 /* Pods-InstaMock-InstaMockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMock-InstaMockUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstaMock-InstaMockUITests/Pods-InstaMock-InstaMockUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		701ED599D00B2FF80431748D /* Pods_InstaMock_InstaMockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaMock_InstaMockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		892053B5DB37FE3FC964175D /* Pods-InstaMock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMock.debug.xcconfig"; path = "Target Support Files/Pods-InstaMock/Pods-InstaMock.debug.xcconfig"; sourceTree = "<group>"; };
+		ADFF0D7769F6A61EF2E0C536 /* Pods_InstaMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3B4527FD985FF7808C0C2A /* Pods-InstaMockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMockTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaMockTests/Pods-InstaMockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE806A9984CAF15EF610A936 /* Pods-InstaMock-InstaMockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMock-InstaMockUITests.release.xcconfig"; path = "Target Support Files/Pods-InstaMock-InstaMockUITests/Pods-InstaMock-InstaMockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D7DCF284980B568EE26C5DD3 /* Pods-InstaMock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMock.release.xcconfig"; path = "Target Support Files/Pods-InstaMock/Pods-InstaMock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34589BED57D8E3F8028D8A31 /* Pods_InstaMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FB934092E494ED0AEB5753 /* Pods_InstaMockTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8522D961306D544F8E6D6236 /* Pods_InstaMock_InstaMockUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				081EBA5625C74AE0005C9CE0 /* Date+Utility.swift */,
+				08A122ED25D4A8C900F44582 /* Style + Utility.swift */,
 				081EBA5825C74B09005C9CE0 /* UIImageView+Utility.swift */,
 				088CD39225D0B42000EC8014 /* Debounce.swift */,
 			);
@@ -147,6 +179,9 @@
 				085F70E025B63271001F2F46 /* InstaMockTests */,
 				085F70EB25B63271001F2F46 /* InstaMockUITests */,
 				085F70C525B6326F001F2F46 /* Products */,
+				08A122EF25D4B14200F44582 /* GoogleService-Info.plist */,
+				C72785C95C86D0257C0FC21A /* Pods */,
+				B7B8F97429132F6EEF1D21AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,10 +287,63 @@
 		087DC9C525B640530061B7A0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				08A122DB25D4896F00F44582 /* Initial View */,
+				08A122E025D48D9F00F44582 /* SignUp */,
+				08A2140325D4867100F0E2C0 /* Login */,
 				087DC9B525B639290061B7A0 /* Feed */,
 				087DC9B825B639570061B7A0 /* Comments */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		08A122DB25D4896F00F44582 /* Initial View */ = {
+			isa = PBXGroup;
+			children = (
+				08A122DC25D4899200F44582 /* InitialViewController.swift */,
+				08A122E725D49C8500F44582 /* InitialView.xib */,
+			);
+			path = "Initial View";
+			sourceTree = "<group>";
+		};
+		08A122E025D48D9F00F44582 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				08A122EB25D49F9100F44582 /* SignUpViewController.swift */,
+				08A122D725D4875D00F44582 /* SignUpView.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		08A2140325D4867100F0E2C0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08A2140625D486B700F0E2C0 /* LoginViewController.swift */,
+				08A122E925D49D8200F44582 /* LoginView.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B7B8F97429132F6EEF1D21AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF0D7769F6A61EF2E0C536 /* Pods_InstaMock.framework */,
+				701ED599D00B2FF80431748D /* Pods_InstaMock_InstaMockUITests.framework */,
+				3E83DB3E3FCCC93954AB036F /* Pods_InstaMockTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C72785C95C86D0257C0FC21A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				892053B5DB37FE3FC964175D /* Pods-InstaMock.debug.xcconfig */,
+				D7DCF284980B568EE26C5DD3 /* Pods-InstaMock.release.xcconfig */,
+				5BCAF89C0A231962CDF113F5 /* Pods-InstaMock-InstaMockUITests.debug.xcconfig */,
+				BE806A9984CAF15EF610A936 /* Pods-InstaMock-InstaMockUITests.release.xcconfig */,
+				BB3B4527FD985FF7808C0C2A /* Pods-InstaMockTests.debug.xcconfig */,
+				12E3D844FB6F9980C857C033 /* Pods-InstaMockTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 085F70F125B63271001F2F46 /* Build configuration list for PBXNativeTarget "InstaMock" */;
 			buildPhases = (
+				6CE98E99EECA5A0A3965C5E4 /* [CP] Check Pods Manifest.lock */,
 				085F70C025B6326F001F2F46 /* Sources */,
 				085F70C125B6326F001F2F46 /* Frameworks */,
 				085F70C225B6326F001F2F46 /* Resources */,
+				BE106C3F7301AF05A574EFEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +372,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 085F70F425B63271001F2F46 /* Build configuration list for PBXNativeTarget "InstaMockTests" */;
 			buildPhases = (
+				F34CFCFCC71A7A7A2DBFE5E2 /* [CP] Check Pods Manifest.lock */,
 				085F70D925B63271001F2F46 /* Sources */,
 				085F70DA25B63271001F2F46 /* Frameworks */,
 				085F70DB25B63271001F2F46 /* Resources */,
@@ -300,9 +391,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 085F70F725B63271001F2F46 /* Build configuration list for PBXNativeTarget "InstaMockUITests" */;
 			buildPhases = (
+				DFEE5969C989BB1B8068F8CC /* [CP] Check Pods Manifest.lock */,
 				085F70E425B63271001F2F46 /* Sources */,
 				085F70E525B63271001F2F46 /* Frameworks */,
 				085F70E625B63271001F2F46 /* Resources */,
+				E5BCBB34D1C02A3146AEB1F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,9 +455,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A122D825D4875D00F44582 /* SignUpView.xib in Resources */,
 				087DC9C425B63E890061B7A0 /* FeedTableViewCell.xib in Resources */,
+				08A122F025D4B14200F44582 /* GoogleService-Info.plist in Resources */,
+				08A122EA25D49D8200F44582 /* LoginView.xib in Resources */,
 				085F70D725B63270001F2F46 /* LaunchScreen.storyboard in Resources */,
 				082480A525B652D10092B501 /* FeedPayload.json in Resources */,
+				08A122E825D49C8500F44582 /* InitialView.xib in Resources */,
 				085F70D425B63270001F2F46 /* Assets.xcassets in Resources */,
 				081EBA5E25C7553A005C9CE0 /* CommentsTableViewCell.xib in Resources */,
 			);
@@ -386,6 +483,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CE98E99EECA5A0A3965C5E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaMock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE106C3F7301AF05A574EFEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaMock/Pods-InstaMock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaMock/Pods-InstaMock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaMock/Pods-InstaMock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFEE5969C989BB1B8068F8CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaMock-InstaMockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5BCBB34D1C02A3146AEB1F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaMock-InstaMockUITests/Pods-InstaMock-InstaMockUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaMock-InstaMockUITests/Pods-InstaMock-InstaMockUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaMock-InstaMockUITests/Pods-InstaMock-InstaMockUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F34CFCFCC71A7A7A2DBFE5E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaMockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		085F70C025B6326F001F2F46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -394,9 +594,13 @@
 				087DC9B725B639410061B7A0 /* FeedViewModel.swift in Sources */,
 				082480A925B657030092B501 /* MockNetworkingLayer.swift in Sources */,
 				087DC9BF25B63D180061B7A0 /* FeedTableViewCell.swift in Sources */,
+				08A122EE25D4A8C900F44582 /* Style + Utility.swift in Sources */,
+				08A122DD25D4899200F44582 /* InitialViewController.swift in Sources */,
 				081EBA5925C74B09005C9CE0 /* UIImageView+Utility.swift in Sources */,
 				088CD39325D0B42000EC8014 /* Debounce.swift in Sources */,
+				08A122EC25D49F9100F44582 /* SignUpViewController.swift in Sources */,
 				085F70CC25B6326F001F2F46 /* FeedViewController.swift in Sources */,
+				08A2140725D486B700F0E2C0 /* LoginViewController.swift in Sources */,
 				087DC9BA25B6396A0061B7A0 /* CommentsViewController.swift in Sources */,
 				081EBA5725C74AE0005C9CE0 /* Date+Utility.swift in Sources */,
 				085F70C825B6326F001F2F46 /* AppDelegate.swift in Sources */,
@@ -568,6 +772,7 @@
 		};
 		085F70F225B63271001F2F46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 892053B5DB37FE3FC964175D /* Pods-InstaMock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +791,7 @@
 		};
 		085F70F325B63271001F2F46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7DCF284980B568EE26C5DD3 /* Pods-InstaMock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +810,7 @@
 		};
 		085F70F525B63271001F2F46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB3B4527FD985FF7808C0C2A /* Pods-InstaMockTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -626,6 +833,7 @@
 		};
 		085F70F625B63271001F2F46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E3D844FB6F9980C857C033 /* Pods-InstaMockTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -648,6 +856,7 @@
 		};
 		085F70F825B63271001F2F46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BCAF89C0A231962CDF113F5 /* Pods-InstaMock-InstaMockUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,6 +877,7 @@
 		};
 		085F70F925B63271001F2F46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE806A9984CAF15EF610A936 /* Pods-InstaMock-InstaMockUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         
-        let viewController = FeedViewController()
+        //let viewController = FeedViewController()
+        let viewController = InitialViewController()
         let navViewController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navViewController
     }

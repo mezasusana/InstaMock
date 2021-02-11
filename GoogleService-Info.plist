@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>512696139101-727lbcack9f3kkosodrfplv7cv4afkq1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.512696139101-727lbcack9f3kkosodrfplv7cv4afkq1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCIRZtcUQQ4MbgB5yaDGe3vL9wN9VeADsQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>512696139101</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SusanaMeza.InstaMock</string>
+	<key>PROJECT_ID</key>
+	<string>instamock-e7140</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instamock-e7140.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:512696139101:ios:c4340f882dfed515037cb4</string>
+</dict>
+</plist>

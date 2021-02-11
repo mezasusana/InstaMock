@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="InstaMock" customModuleProvider="target">
+            <connections>
+                <outlet property="logInButton" destination="oaA-EH-ZPp" id="d66-25-SDe"/>
+                <outlet property="signUpButton" destination="sLJ-1F-Huz" id="TyX-xW-o6q"/>
+                <outlet property="view" destination="iN0-l3-epB" id="GTi-Cv-744"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-yK-PWg">
+                    <rect key="frame" x="40" y="84" width="334" height="550"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="550" id="YLy-Wu-Tff"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jFH-OS-y85">
+                    <rect key="frame" x="40" y="702" width="334" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLJ-1F-Huz">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gcv-lU-Qtl"/>
+                            </constraints>
+                            <state key="normal" title="Sign Up"/>
+                            <connections>
+                                <action selector="signUpButtonTapped:" destination="-1" eventType="touchUpInside" id="0GX-Fn-8YV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-EH-ZPp">
+                            <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="cB9-Ya-bIR"/>
+                            </constraints>
+                            <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="Ra5-nk-DaI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="sLJ-1F-Huz" firstAttribute="height" secondItem="oaA-EH-ZPp" secondAttribute="height" multiplier="1.66667" id="rDe-bt-6MM"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="rDe-bt-6MM"/>
+                        </mask>
+                    </variation>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="jFH-OS-y85" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="2cj-hS-JZX"/>
+                <constraint firstItem="0lV-yK-PWg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="5zQ-WJ-PfN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0lV-yK-PWg" secondAttribute="trailing" constant="40" id="9yC-5k-BYO"/>
+                <constraint firstItem="0lV-yK-PWg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Gri-AE-Cbx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jFH-OS-y85" secondAttribute="trailing" constant="40" id="dVr-vI-d97"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jFH-OS-y85" secondAttribute="bottom" constant="40" id="uFZ-n6-6zN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-147.32142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundImage" width="1242" height="2208"/>
+    </resources>
+</document>
